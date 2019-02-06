@@ -1,0 +1,29 @@
+{
+  "name": "shinonomekazan-web",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass --omit-source-map-url sass/main.scss css/main.css",
+    "start": "node --experimental-modules start.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shinonomekazan/web.git"
+  },
+  "author": "Shinonomekazan Co., Ltd.",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/shinonomekazan/web/issues"
+  },
+  "homepage": "https://github.com/shinonomekazan/web#readme",
+  "dependencies": {
+    "bulma-start": "0.0.2"
+  },
+  "devDependencies": {
+    "bulma": "^0.7.2",
+    "node-sass": "^4.11.0",
+    "webpack": "^4.29.1"
+  }
+}
