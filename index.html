@@ -5,21 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>株式会社東雲火山</title>
 		<!--
+		CDNからだとここから読むらしい
 		<link relf="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
 		-->
 		<link rel="stylesheet" href="css/main.css">
-		<script type="text/javascript">
-		document.addEventListener("DOMContentLoaded", function() {
-			document.querySelectorAll(".burger").forEach(function(el) {
-				el.addEventListener("click", function() {
-					var target = el.dataset.target;
-					target = document.getElementById(target);
-					el.classList.toggle("is-active");
-					target.classList.toggle("is-active");
-				});
-			});
-		});
-		</script>
+		<script src="./js/index.js" async></script>
 	</head>
 	<body>
 		<header>
@@ -30,15 +20,14 @@
 			</div>
 			<nav class="navbar" role="navigation" aria-label="main navigation">
 				<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenuDocumentation">
+					<!-- span三つで棒3本のハンバーガー -->
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
 				</a>
 				<div id="navbarMenuDocumentation" class="navbar-menu">
 					<div class="navbar-start">
-						<a class="navbar-item" href="#about">
-							会社概要
-						</a>
+						<a class="navbar-item" href="#about">会社概要</a>
 						<a class="navbar-item" href="#work">事業内容</a>
 						<a class="navbar-item" href="#announcement">公告等</a>
 						<a class="navbar-item" href="#contact">お問い合わせ</a>
@@ -57,7 +46,33 @@
 						<h3 class="subtitle">企業理念</h3>
 					</header>
 					<div class="content">
-						<p>株式会社東雲火山はほげほげ</p>
+						<div class="content">
+							<p>株式会社東雲火山は、主にWeb/ゲーム系の受託・請負開発と自社サービス開発を行う会社です。</p>
+							<p>色々と面白い事をやっていきたいところなのですが、会社運営が初めての身で大風呂敷だけ先に広げるのは控えたいため、こちらへの記述は最小限にとどめます。</p>
+							<p>以下は、おおよその目安としたいロードマップですが、東雲火山にとって直近で最も重要視するのは受託開発業務である、というのが当面の間は唯一対外的に重要な点です。</p>
+						</div>
+						<div id="roadmap" class="content">
+							<table>
+								<tbody>
+									<tr>
+										<th>2019年</th>
+										<td>会社設立。一人法人で受託中心に事業を行いつつ、会社経営に慣れる</td>
+									</tr>
+									<tr>
+										<th>2020年</th>
+										<td>受託事業を継続的に実施しつつ、自社サービスまたは受託以外の事業での売り上げを立て始める</td>
+									</tr>
+									<tr>
+										<th>2021年</th>
+										<td>受託事業を継続的に実施しつつ、自社サービスまたは受託以外の事業での売り上げを当初想定通りの金額に乗せる</td>
+									</tr>
+									<tr>
+										<th>2022年以降</th>
+										<td>面白いことをやる</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</article>
 				<article class="content">
@@ -96,15 +111,36 @@
 									<td>100万円</td>
 								</tr>
 								<tr>
+									<th>代表取締役</th>
+									<td>告原豊和（つげはら とよかず）</td>
+								</tr>
+								<tr>
 									<th>主要取引先</th>
 									<td>まだありません</td>
 								</tr>
 								<tr>
 									<th>加盟団体</th>
-									<td>まだありません</td>
+									<td>東京商工会議所（予定）</td>
 								</tr>
 							</tbody>
 						</table>
+					</div>
+				</article>
+				<article class="content">
+					<header>
+						<h3 class="subtitle">代表取締役略歴</h3>
+					</header>
+					<div class="content">
+						<ul>
+							<li>～17歳まで: 小学校5年生でプログラミングをはじめ、6年生で引きこもり、中学校は一日だけ登校</li>
+							<li>17歳～19歳: 家出して肉体労働や接客をやっていたら結核にかかり強制送還
+							<li>20歳～25歳: 日本のSIerでSEとして働く（途中やめて半年間ウルティマオンラインをする等する）
+							<li>25歳～28歳: ベトナムでCTOとして共同起業したが、のち倒産
+							<li>28歳～30歳: ベトナムと日本の合弁会社に役員として入り、現地でソーシャルゲームを運営する
+							<li>30歳～31歳: ベトナム人の妻と結婚、妻とベトナム奥地で会社を作り自社サービス開発に没頭
+							<li>32歳～36歳: 奇病にかかり日本帰国。株式会社ドワンゴで正社員として働く
+							<li>37歳～: ドワンゴを退社し、東雲火山を起業
+						</ul>
 					</div>
 				</article>
 			</section>
@@ -115,23 +151,125 @@
 						<h3 class="subtitle">受託・請負開発</h3>
 					</header>
 					<div class="content">
-						<p>ほげほげ</p>
+						<p>東雲火山はWeb/ゲーム系はフロントエンドもバックエンドも一通りこなす何でも屋です。</p>
+						<p>人手が足りない、設計で困っている、などの箇所があれば、お気軽にご相談ください。何かしらお力になれると思います。</p>
+						<p><strong>ただし、</strong>所詮一人法人なので一か月に160時間といったまとまった時間を東雲火山単体で提供することは、よほど時期が合わない限り難しいです。ある程度の開発力は有していますが、一定以上の規模の開発を単独でこなすことは難しいのが正直な実情です。</p>
+						<p>開発業務の単純な下請けよりも、エンジニアリングだけでは難しい問題を総合的に解決したい際にご利用検討いただく事をお勧めします。</p>
 					</div>
-				</article>
+					<div class="content">
+						<h4>目安単価</h4>
+						<p>基本的な受注単価の目安として人月で120万円という価格を設定しています。</p>
+						<p>時間が減るごとに少しずつ単価が上がっていきます。時間単位での発注である必要はありませんが、金額感の目安としてご参照ください。</p>
+						<div class="content">
+							<table>
+								<thead>
+									<tr>
+										<th>一週間での勤務時間</th>
+										<th>月額目安</th>
+										<th>1時間辺り</th>
+										<th>160時間換算</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>週5日（160時間相当）</th>
+										<td>120万円</td>
+										<td>7500円</td>
+										<td>120万人月相当<td>
+									</tr>
+									<tr>
+										<th>週4日（128時間相当）</th>
+										<td>104万円</td>
+										<td>8125円</td>
+										<td>130万人月相当<td>
+									</tr>
+									<tr>
+										<th>週3日（96時間相当）</th>
+										<td>84万円</td>
+										<td>8750円</td>
+										<td>140万人月相当<td>
+									</tr>
+									<tr>
+										<th>週2日（64時間相当）</th>
+										<td>60万円</td>
+										<td>9375円</td>
+										<td>150万人月相当<td>
+									</tr>
+									<tr>
+										<th>週1日（32時間相当）</th>
+										<td>32万円</td>
+										<td>10000円</td>
+										<td>160万人月相当<td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="content">
+						<h4>ケース1: オフショア開発のブリッジSE</h4>
+						<p>東雲火山はベトナムで7年間ほど業務をしていた実績があり、ベトナムオフショア開発の橋渡しをすることができます。</p>
+						<p>東雲火山が週1の常駐とリモートワークで日本とベトナムの間を仲介しつつ、10名のオフショア開発部隊を案件の実開発部隊として投入する、などの活用が可能です。</p>
+						<p>オフショア開発の発注先提案から受け持つことが可能です。</p>
+						<p>TODO: 絵を入れたいですね</p>
+					</div>
+					<div class="content">
+						<h4>ケース2: CTO不在プロジェクトでの技術コンサル</h4>
+						<p>企画があり、資金もあるが、CTOに相当する立ち位置の人がおらずプロジェクトの進行に支障が出るケースがあります。</p>
+						<p>例えば地図アプリを作る場合にGoogle Mapsを使うのがいいか、Open Street Mapを使うのがいいか、MapBoxを使うのがいいのか等も、ニーズに合わせてご相談に乗れます。</p>
+						<p>開発予算や開発会社の選定から、その開発部隊のマネージメントまで、週2日の稼働もあれば見ることができるでしょう。</p>
+						<p>実際の開発業務も受け持てるため、ある程度のプロトタイピングであれば東雲火山単体で作って道筋を示すこともできます。</p>
+						<p>TODO: 絵を入れたいですね</p>
+					</div>
+					<div class="content">
+						<h4>ケース3: 設計やコードのコンサルティング</h4>
+						<p>例えば、学生ベンチャーが生放送サービスの開発をするとして、設計をしてみたが本当に耐えるのか不安といったケースがあると思います。</p>
+						<p>ある程度、大規模なシステム運用の経験があるため、その経験を基にアドバイスをさせていただきます。</p>
+						<p>GitHubのPull Request Reviewだけでも、といったニーズにも対応できます。</p>
+						<p>TODO: 絵を入れたいですね</p>
+					</div>
+					<div class="content">
+						<h4>ケース4: 余った予算を企画から丸投げ</h4>
+						<p>予算と大体のニーズはあるけど企画もない、という状況もあると思います。</p>
+						<p>IT化の企画を立てようにも、技術がわからないため実現性が不明瞭という方もいれば、そもそも時間がないという方もいらっしゃると思います。</p>
+						<p>幸い技術も企画も運用も受け持てるため、大体でヒアリングさせていただければ、企画提案からさせていただくことも可能です。</p>
+						<p>TODO: 絵を入れたいですね</p>
+					</div>
+					<div class="content">
+						<h4>ケース5: スポットでの手助け</h4>
+						<p>プロジェクトも終盤になったがどうしても難しい問題がある、等のケースでは、スポットでのご依頼もご検討ください。</p>
+						<p>サービスインをするために修正をしないといけないバグがあるが直せない、といったケースで、バグ修正対応は元より、バグを直さずにサービスインをする方法等のトンチをきかせた提案も可能です。</p>
+						<p>TODO: 絵を入れたいですね</p>
+					</div>
+					<div class="content">
+						<h4>苦手な事</h4>
+						<p>苦手分野であっても頑張ってやっていきたいと心掛けてはおりますが、現在はあまり得意でないところがたくさんあります。</p>
+						<p>この辺りは発注を控えるか、値引きを念頭に依頼されることをお勧めします。</p>
+						<ul>
+							<li>3Dゲームのフロントエンド実装（やりたいですが専門家にはとてもかなわないと思います）</li>
+							<li>機械学習（「機械学習を利用したサービス」は得意ですが機械学習そのものが未経験です）</li>
+							<li>関数型言語（勉強不足です。やりたい気持ちはあります）</li>
+							<li>サーバの物理設計（やったことないのでLANケーブルを作るのも苦労して失望される可能性が高いです）</li>
+							<li>英語（海外経験のためよく勘違いされますが、英語は話せません）</li>
+						</ul>
+						</div>
+					</article>
 				<article class="content">
 					<header>
 						<h3 class="subtitle">自社サービス開発</h3>
 					</header>
 					<div class="content">
-						<p>ほげほげ</p>
+						<p>東雲火山の「火山」の部分には、<strong>島</strong>を生み出すもの、という意味が込められています。</p>
+						<p>島とはプラットフォームだととらえており、<strong>東雲火山はプラットフォームを生み出す会社</strong>です。</p>
+						<p>社是として、「思い立ったら即S-IN」を掲げているので、すでに市場にあるものと大体似たようなものでも、とりあえず考えたら作ってまず世に出してみる、という方向で進める予定です。</p>
 					</div>
 				</article>
 				<article class="content">
 					<header>
-						<h3 class="subtitle">ベトナムとのなんとかかんとか</h3>
+						<h3 class="subtitle">ベトナムとの業務</h3>
 					</header>
 					<div class="content">
-						<p>ほげほげ</p>
+						<p>東雲火山は、ベトナムの事情にそれなりに通じており、ベトナム人の友人も、ベトナムで事業をしている日本人の友人もそれなりにいます。</p>
+						<p>通訳、翻訳、会社設立、発注先のリストアップ、ベトナムでのサービス展開など、ベトナム関連での相談があればお気軽にご相談ください。</p>
 					</div>
 				</article>
 			</section>
