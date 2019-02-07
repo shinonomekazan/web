@@ -10,6 +10,4 @@ function activateBurgers() {
 	});
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-	activateBurgers();
-});
+activateBurgers();
