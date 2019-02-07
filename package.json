@@ -13,7 +13,7 @@
     "url": "git+https://github.com/shinonomekazan/web.git"
   },
   "author": "Shinonomekazan Co., Ltd.",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/shinonomekazan/web/issues"
   },
