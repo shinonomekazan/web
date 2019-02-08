@@ -28,28 +28,62 @@ function promiseWrite(path, body) {
 		})
 	})
 }
+function promiseReadDir(dirpath) {
+	return new Promise((resolve, reject) => {
+		fs.readdir(dirpath, (err, files) => {
+			if (err) {
+				reject(new Error(err));
+				return;
+			}
+			const ret = [];
+			let count = files.length;;
+			files.forEach((file) => {
+				const targetPath = path.resolve(dirpath, file);
+				fs.stat(targetPath, (err, stat) => {
+					--count;
+					if (err) {
+						reject(new Error(err));
+						return;
+					}
+					if (stat.isFile()) {
+						ret.push(targetPath);
+					}
+					if (count === 0) {
+						resolve(ret);
+					}
+				});
+			});
+		});
+	})
+}
 
 const promises = [];
 promises.push(promiseRead("template/parts/footer.html"));
 promises.push(promiseRead("template/parts/head.html"));
 promises.push(promiseRead("template/parts/header.html"));
-const templates = [
-	"index.html"
-];
+
 Promise.all(promises)
 	.then((parts) => {
-		parts.forEach((part) => {
+		return promiseReadDir("template").then((templates) => {
+			return {
+				parts,
+				templates
+			};
+		});
+	}).then((seed) => {
+		seed.parts.forEach((part) => {
 			hbs.registerPartial(path.basename(part.path, ".html"), part.data);
 		});
-		return Promise.all(templates.map((template) => {
-			return promiseRead(path.join("template", template));
+		return Promise.all(seed.templates.map((template) => {
+			return promiseRead(template);
 		}));
 	}).then((templates) => {
-		return new Promise.all(templates.map((template) => {
+		return Promise.all(templates.map((template) => {
 			const html = hbs.compile(template.data);
 			// これをファイル出力すればまあ使える
 			return promiseWrite(
-				path.join(__dirname, path.basename(template.path)),
+				// Note: ほんとはprocess.cwd()じゃなくて__dirname使いたいがmjsだと使えない
+				path.join(process.cwd(), path.basename(template.path)),
 				html()
 			);
 		}));
