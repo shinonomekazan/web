@@ -83,7 +83,7 @@ Promise.all(promises)
 			// これをファイル出力すればまあ使える
 			return promiseWrite(
 				// Note: ほんとはprocess.cwd()じゃなくて__dirname使いたいがmjsだと使えない
-				path.join(process.cwd(), path.basename(template.path)),
+				path.join(process.cwd(), "html", path.basename(template.path)),
 				html()
 			);
 		}));

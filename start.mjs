@@ -7,12 +7,13 @@ const server = http.createServer((req, res) => {
 	function getPath() {
 		switch (req.url) {
 			case "/":
-			return "./index.html";
+			return "./html/index.html";
 			case "/index.html":
 			case "/work.html":
 			case "/about.html":
 			case "/announcement.html":
 			case "/contact.html":
+			return "./html/" + req.url.substr(1);
 			case "/css/main.css":
 			case "/js/index.js":
 			return "./" + req.url.substr(1);
