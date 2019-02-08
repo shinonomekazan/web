@@ -17,6 +17,17 @@ function promiseRead(path) {
 		})
 	});
 }
+function promiseWrite(path, body) {
+	return new Promise((resolve, reject) => {
+		fs.writeFile(path, body, {encoding: "utf8"}, (err) => {
+			if (err) {
+				reject(new Error(err));
+				return;
+			}
+			resolve(path);
+		})
+	})
+}
 
 const promises = [];
 promises.push(promiseRead("template/parts/footer.html"));
@@ -34,11 +45,16 @@ Promise.all(promises)
 			return promiseRead(path.join("template", template));
 		}));
 	}).then((templates) => {
-		templates.forEach((template) => {
+		return new Promise.all(templates.map((template) => {
 			const html = hbs.compile(template.data);
 			// これをファイル出力すればまあ使える
-			console.log(html());
-		});
+			return promiseWrite(
+				path.join(__dirname, path.basename(template.path)),
+				html()
+			);
+		}));
+	}).then(() => {
+		console.log("finished");
 	}).catch((err) => {
 		console.error(err);
 	});
