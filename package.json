@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.mjs",
   "scripts": {
-    "build": "node-sass --omit-source-map-url sass/main.scss css/main.css",
-    "start": "node --experimental-modules start.mjs",
-    "test": "node --experimental-modules index.mjs"
+    "build:css-from-sass": "sass --no-source-map sass/main.sass css/main.css",
+    "build:css-from-scss": "sass --no-source-map sass/main.scss css/main.css",
+    "build:html": "node --experimental-modules index.mjs",
+    "build": "npm run build:css-from-sass && npm run build:html",
+    "start": "node --experimental-modules start.mjs"
   },
   "repository": {
     "type": "git",
@@ -19,12 +21,10 @@
   },
   "homepage": "https://github.com/shinonomekazan/web#readme",
   "dependencies": {
-    "bulma-start": "0.0.2",
-    "handlebars": "^4.1.0"
+    "handlebars": "^4.1.0",
+    "sass": "^1.17.0"
   },
   "devDependencies": {
-    "bulma": "^0.7.2",
-    "node-sass": "^4.11.0",
-    "webpack": "^4.29.1"
+    "bulma": "^0.7.2"
   }
 }
