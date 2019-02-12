@@ -51,4 +51,4 @@ const server = http.createServer((req, res) => {
 		res.end(data);
 	});
 });
-server.listen(3000, "localhost");
+server.listen(3000);

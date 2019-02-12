@@ -1,17 +1,16 @@
 <header>
-	<nav class="navbar is-link">
+	<nav class="navbar is-link is-fixed-top">
 		<div class="navbar-brand">
 			<a class="navbar-item" href="/">
 				<img alt="株式会社東雲火山" width="180" height="64">
 			</a>
+			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+				data-target="navbarMenuDocumentation">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
 		</div>
-		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-			data-target="navbarMenuDocumentation">
-			<!-- span三つで棒3本のハンバーガー -->
-			<span aria-hidden="true"></span>
-			<span aria-hidden="true"></span>
-			<span aria-hidden="true"></span>
-		</a>
 		<div id="navbarMenuDocumentation" class="navbar-menu">
 			<div class="navbar-start">
 				<a class="navbar-item" href="./">会社概要</a>
@@ -19,16 +18,13 @@
 				<a class="navbar-item" href="./announcement.html">公告等</a>
 				<a class="navbar-item" href="./contact.html">お問い合わせ</a>
 			</div>
-			<div class="navbar-end">
-				<!-- TODO-->
-			</div>
 		</div>
 	</nav>
 	<section class="hero">
 		<div class="hero-body">
 			<h1 class="title is-1">株式会社東雲火山</h1>
 			{{#if subtitle}}
-			<h2 class="subtitle is-3">{{subtitle}}</h2>
+			<h2 class="subtitle is-2">{{subtitle}}</h2>
 			{{/if}}
 		</div>
 	</section>

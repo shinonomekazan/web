@@ -303,15 +303,15 @@ table th {
 }
 
 .is-size-1 {
-  font-size: 3rem !important;
+  font-size: 2.4rem !important;
 }
 
 .is-size-2 {
-  font-size: 2.5rem !important;
+  font-size: 2rem !important;
 }
 
 .is-size-3 {
-  font-size: 2rem !important;
+  font-size: 1.7rem !important;
 }
 
 .is-size-4 {
@@ -319,7 +319,7 @@ table th {
 }
 
 .is-size-5 {
-  font-size: 1.25rem !important;
+  font-size: 1.2rem !important;
 }
 
 .is-size-6 {
@@ -332,15 +332,15 @@ table th {
 
 @media screen and (max-width: 768px) {
   .is-size-1-mobile {
-    font-size: 3rem !important;
+    font-size: 2.4rem !important;
   }
 
   .is-size-2-mobile {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
   }
 
   .is-size-3-mobile {
-    font-size: 2rem !important;
+    font-size: 1.7rem !important;
   }
 
   .is-size-4-mobile {
@@ -348,7 +348,7 @@ table th {
   }
 
   .is-size-5-mobile {
-    font-size: 1.25rem !important;
+    font-size: 1.2rem !important;
   }
 
   .is-size-6-mobile {
@@ -361,15 +361,15 @@ table th {
 }
 @media screen and (min-width: 769px), print {
   .is-size-1-tablet {
-    font-size: 3rem !important;
+    font-size: 2.4rem !important;
   }
 
   .is-size-2-tablet {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
   }
 
   .is-size-3-tablet {
-    font-size: 2rem !important;
+    font-size: 1.7rem !important;
   }
 
   .is-size-4-tablet {
@@ -377,7 +377,7 @@ table th {
   }
 
   .is-size-5-tablet {
-    font-size: 1.25rem !important;
+    font-size: 1.2rem !important;
   }
 
   .is-size-6-tablet {
@@ -390,15 +390,15 @@ table th {
 }
 @media screen and (max-width: 1087px) {
   .is-size-1-touch {
-    font-size: 3rem !important;
+    font-size: 2.4rem !important;
   }
 
   .is-size-2-touch {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
   }
 
   .is-size-3-touch {
-    font-size: 2rem !important;
+    font-size: 1.7rem !important;
   }
 
   .is-size-4-touch {
@@ -406,7 +406,7 @@ table th {
   }
 
   .is-size-5-touch {
-    font-size: 1.25rem !important;
+    font-size: 1.2rem !important;
   }
 
   .is-size-6-touch {
@@ -419,15 +419,15 @@ table th {
 }
 @media screen and (min-width: 1088px) {
   .is-size-1-desktop {
-    font-size: 3rem !important;
+    font-size: 2.4rem !important;
   }
 
   .is-size-2-desktop {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
   }
 
   .is-size-3-desktop {
-    font-size: 2rem !important;
+    font-size: 1.7rem !important;
   }
 
   .is-size-4-desktop {
@@ -435,7 +435,7 @@ table th {
   }
 
   .is-size-5-desktop {
-    font-size: 1.25rem !important;
+    font-size: 1.2rem !important;
   }
 
   .is-size-6-desktop {
@@ -448,15 +448,15 @@ table th {
 }
 @media screen and (min-width: 1280px) {
   .is-size-1-widescreen {
-    font-size: 3rem !important;
+    font-size: 2.4rem !important;
   }
 
   .is-size-2-widescreen {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
   }
 
   .is-size-3-widescreen {
-    font-size: 2rem !important;
+    font-size: 1.7rem !important;
   }
 
   .is-size-4-widescreen {
@@ -464,7 +464,7 @@ table th {
   }
 
   .is-size-5-widescreen {
-    font-size: 1.25rem !important;
+    font-size: 1.2rem !important;
   }
 
   .is-size-6-widescreen {
@@ -477,15 +477,15 @@ table th {
 }
 @media screen and (min-width: 1472px) {
   .is-size-1-fullhd {
-    font-size: 3rem !important;
+    font-size: 2.4rem !important;
   }
 
   .is-size-2-fullhd {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
   }
 
   .is-size-3-fullhd {
-    font-size: 2rem !important;
+    font-size: 1.7rem !important;
   }
 
   .is-size-4-fullhd {
@@ -493,7 +493,7 @@ table th {
   }
 
   .is-size-5-fullhd {
-    font-size: 1.25rem !important;
+    font-size: 1.2rem !important;
   }
 
   .is-size-6-fullhd {
@@ -3038,7 +3038,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   font-size: 0.75rem;
 }
 .content.is-medium {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 .content.is-large {
   font-size: 1.5rem;
@@ -3222,7 +3222,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 
 .title {
   color: #363636;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 600;
   line-height: 1.125;
 }
@@ -3237,19 +3237,19 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   margin-top: -1.25rem;
 }
 .title.is-1 {
-  font-size: 3rem;
+  font-size: 2.4rem;
 }
 .title.is-2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 .title.is-3 {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 .title.is-4 {
   font-size: 1.5rem;
 }
 .title.is-5 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 .title.is-6 {
   font-size: 1rem;
@@ -3260,7 +3260,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 
 .subtitle {
   color: #4a4a4a;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.25;
 }
@@ -3272,19 +3272,19 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   margin-top: -1.25rem;
 }
 .subtitle.is-1 {
-  font-size: 3rem;
+  font-size: 2.4rem;
 }
 .subtitle.is-2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 .subtitle.is-3 {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 .subtitle.is-4 {
   font-size: 1.5rem;
 }
 .subtitle.is-5 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 .subtitle.is-6 {
   font-size: 1rem;
@@ -4135,7 +4135,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   font-size: 0.75rem;
 }
 .button.is-medium {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 .button.is-large {
   font-size: 1.5rem;
@@ -5401,7 +5401,7 @@ body.has-spaced-navbar-fixed-bottom {
   font-size: 0.75rem;
 }
 .message.is-medium {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 .message.is-large {
   font-size: 1.5rem;
