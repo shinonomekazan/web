@@ -15,6 +15,24 @@
 	<link rel="stylesheet" href="css/main.css">
 	<script src="./js/index.js" async></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var form = document.querySelector("#contactForm");
+			function validation(e) {
+				if (! form.email.value) {
+					form.email.focus();
+					e.preventDefault();
+					return;
+				}
+				if (! form.message.value) {
+					form.message.focus();
+					e.preventDefault();
+					return;
+				}
+			}
+			form.addEventListener("submit", validation);
+		});
+	</script>
 </head>
 
 <body class="has-navbar-fixed-top">
@@ -63,7 +81,7 @@
 		<section id="contact">
 			<h2 class="subtitle is-4">お問い合わせ</h2>
 			<div>
-				<form action="success.html" name="contact" method="POST" data-netlify="true">
+				<form action="success.html" id="contactForm" name="contact" method="POST" data-netlify="true">
 					<div class="field">
 						<p class="control has-icons-left">
 							<input type="email" name="email" class="input" placeholder="メールアドレス"/>
