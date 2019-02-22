@@ -1,6 +1,10 @@
 # 株式会社東雲火山のホームページ
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1144d4c3-87db-4b83-a04f-2a2c8f5f3ef0/deploy-status)](https://app.netlify.com/sites/gracious-visvesvaraya-65ad09/deploys)
+
 株式会社東雲火山のホームページを作るためのリポジトリです。
+
+`gh-pages` ブランチに対して、 https://shinonomekazan.com でNetlifyでデプロイされています。
 
 HTMLやCSSを長らく触っていなかったのでその勉強用として作っており、デザイナーさんに依頼するまでの捨てコードで構成されています。
 
@@ -11,6 +15,7 @@ VuePressかGatsbyを使うべき内容ですが、極力JavaScriptを使いた�
 - git clone -> npm iしてから、npm startでローカル実行
 - `template` や `sass` や `js` をいじって `npm run build` とかして使います
 - `gh-pages` で公開する場合、`cp` と `rm` と `git` が動くなら `npm run deploy` で楽をできます
+- Netlifyは自動デプロイです
 
 ## 使った技術
 
@@ -27,6 +32,12 @@ VuePressかGatsbyを使うべき内容ですが、極力JavaScriptを使いた�
     - 最終的にはVuePressとかGatsbyとかに移行するとは思いますがそれ使っちゃうとこのリポジトリの意味がない
 - デバッグ用に[node.jsのmjs](https://nodejs.org/api/esm.html)
     - ずっとTypeScript触ってきて認識がもやっているが今更requireもなぁ・・ということで
+- [Netlify](https://www.netlify.com/)
+    - 最初[Firebase](https://firebase.google.com/)にしようと思いましたが・・
+    - さすがにコーポレートサイトは違うのでは？と思い、Netlifyを使ってみました
+- [Google Analytics](https://analytics.google.com/analytics/web/)とGoogle Tag Manager
+    - GitHubに入れるコードに入れるべきか悩ましいところですが
+    - 埋め込んだのはGTAのタグで、タグにAnalyticsを連動させて管理してます
 
 ## LICENSE
 
