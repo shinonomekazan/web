@@ -3,6 +3,7 @@
 
 <head>
 	{{>head title="お問い合わせ | 株式会社東雲火山"}}
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
 <body class="has-navbar-fixed-top">
@@ -23,7 +24,24 @@
 		<section id="contact">
 			<h2 class="subtitle is-4">お問い合わせ</h2>
 			<div>
-				<a class="button" href="javascript:alert('作業中')">問い合わせ</a>
+				<form action="success.html" name="contact" method="POST" data-netlify="true">
+					<div class="field">
+						<p class="control has-icons-left">
+							<input type="email" name="email" class="input" placeholder="メールアドレス"/>
+							<span class="icon is-small is-left">
+								<i class="fas fa-envelope"></i>
+							</span>
+						</p>
+					</div>
+					<div class="field">
+						<div class="control">
+							<textarea class="textarea" name="message" placeholder="問い合わせ内容をご記入ください"></textarea>
+						</div>
+					</div>
+					<div>
+						<button class="button" type="submit">問い合わせ</button>
+					</div>
+				</form>
 			</div>
 		</section>
 	</main>

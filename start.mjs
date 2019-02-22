@@ -13,6 +13,7 @@ const server = http.createServer((req, res) => {
 			case "/about.html":
 			case "/announcement.html":
 			case "/contact.html":
+			case "/success.html":
 			return "./html/" + req.url.substr(1);
 			case "/css/main.css":
 			case "/js/index.js":
