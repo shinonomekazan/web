@@ -5,6 +5,9 @@ import * as path from "path";
 const server = http.createServer((req, res) => {
 	// no cache
 	function getPath() {
+		if (req.url.startsWith("/files/")) {
+			return "./" + req.url.substr(1);
+		}
 		switch (req.url) {
 			case "/":
 			return "./html/index.html";
@@ -15,9 +18,6 @@ const server = http.createServer((req, res) => {
 			case "/contact.html":
 			case "/success.html":
 			return "./html/" + req.url.substr(1);
-			case "/files/teikan.pdf":
-			case "/files/meibo.pdf":
-			return "./" + req.url.substr(1);
 			case "/css/main.css":
 			case "/js/index.js":
 			return "./" + req.url.substr(1);
