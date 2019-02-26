@@ -15,6 +15,9 @@ const server = http.createServer((req, res) => {
 			case "/contact.html":
 			case "/success.html":
 			return "./html/" + req.url.substr(1);
+			case "/files/teikan.pdf":
+			case "/files/meibo.pdf":
+			return "./" + req.url.substr(1);
 			case "/css/main.css":
 			case "/js/index.js":
 			return "./" + req.url.substr(1);
@@ -28,13 +31,19 @@ const server = http.createServer((req, res) => {
 		res.end();
 		return;
 	}
-	fs.readFile(f, {encoding: "utf8"}, (err, data) => {
+	const ext = path.extname(f).toLowerCase();
+	fs.readFile(f, (err, data) => {
 		if (err) {
 			res.writeHead(500);
 			res.end(err.message);
 			return;
 		}
-		switch (path.extname(f).toLowerCase()) {
+		switch (ext) {
+			case ".pdf":
+				res.writeHead(200, {
+					"Content-Type": "application/pdf"
+				});
+				break;
 			case ".css":
 				res.writeHead(200, {
 					"Content-Type": "text/css"
