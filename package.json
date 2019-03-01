@@ -9,7 +9,7 @@
     "build:html": "node --experimental-modules index.mjs",
     "build": "npm run build:css-from-sass && npm run build:html",
 	"start": "npm run build && node --experimental-modules start.mjs",
-	"deploy": "npm run build && rm -rf dist && mkdir dist && cp -R html/* dist/ && cp -R css dist/ && cp -R js dist/ && cp -R files dist/ && git checkout gh-pages && cp -Rf dist/* ./ && rm -rf dist && echo \"commmit and push pleaes.\""
+	"deploy": "npm run build && rm -rf dist && mkdir dist && cp -R html/* dist/ && cp -R css dist/ && cp -R js dist/ && cp -R files dist/"
   },
   "repository": {
     "type": "git",
