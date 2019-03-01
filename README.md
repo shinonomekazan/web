@@ -12,7 +12,7 @@ VuePressかGatsbyを使うべき内容ですが、極力JavaScriptを使いた�
 
 ## 使い方
 
-- git clone -> npm iしてから、npm startでローカル実行
+- git clone -> npm iしてから、npm startでローカル実行（ただし実行にはなぜかnode v10系以上が必要です）
 - `template` や `sass` や `js` をいじって `npm run build` とかして使います
 - Netlifyは自動デプロイです。この際`npm run deploy`を使って`dist`ディレクトリを対象にしています
 

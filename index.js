@@ -2,6 +2,28 @@ const hbs = require("handlebars");
 const fs = require("fs");
 const path = require("path");
 
+function promiseMakeDirectory(path) {
+	return new Promise((resolve, reject) => {
+		fs.stat(path, (err, stats) => {
+			if (err) {
+				// 決め打ち
+				fs.mkdir(path, {mode: 755}, (err2 => {
+					if (err2) {
+						return reject(err2);
+					}
+					resolve();
+				}));
+				return;
+			}
+			if (stats.isDirectory()) {
+				resolve();
+				return;
+			}
+			reject(new Error("invalid file detected: " + path));
+		})
+	});
+}
+
 function promiseRead(path) {
 	return new Promise((resolve, reject) => {
 		fs.readFile(path, {encoding: "utf8"}, (err, data) => {
@@ -56,13 +78,14 @@ function promiseReadDir(dirpath) {
 	})
 }
 
-const promises = [];
-promises.push(promiseRead("template/parts/footer.html"));
-promises.push(promiseRead("template/parts/head.html"));
-promises.push(promiseRead("template/parts/header.html"));
-
-Promise.all(promises)
-	.then((parts) => {
+promiseMakeDirectory("html")
+	.then(() => {
+		const promises = [];
+		promises.push(promiseRead("template/parts/footer.html"));
+		promises.push(promiseRead("template/parts/head.html"));
+		promises.push(promiseRead("template/parts/header.html"));
+		return Promise.all(promises);
+	}).then((parts) => {
 		return promiseReadDir("template").then((templates) => {
 			return {
 				parts,
