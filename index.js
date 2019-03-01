@@ -1,7 +1,6 @@
-import handlebars from "handlebars";
-import hbs from "handlebars";
-import * as fs from "fs";
-import * as path from "path";
+const hbs = require("handlebars");
+const fs = require("fs");
+const path = require("path");
 
 function promiseRead(path) {
 	return new Promise((resolve, reject) => {
