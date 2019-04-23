@@ -8,8 +8,8 @@
     "build:css-from-scss": "sass --no-source-map sass/main.scss css/main.css",
     "build:html": "node index.js",
     "build": "npm run build:css-from-sass && npm run build:html",
-	"start": "npm run build && node --experimental-modules start.mjs",
-	"deploy": "npm run build && rm -rf dist && mkdir dist && cp -R html/* dist/ && cp -R css dist/ && cp -R js dist/ && cp -R files dist/"
+    "start": "npm run build && node --experimental-modules start.mjs",
+    "deploy": "npm run build && rm -rf dist && mkdir dist && cp -R html/* dist/ && cp -R css dist/ && cp -R js dist/ && cp -R files dist/ && cp *.png dist/ && cp *.ico dist/"
   },
   "repository": {
     "type": "git",

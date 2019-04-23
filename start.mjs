@@ -17,9 +17,13 @@ const server = http.createServer((req, res) => {
 			case "/announcement.html":
 			case "/contact.html":
 			case "/success.html":
+			case "/logo.html":
 			return "./html/" + req.url.substr(1);
 			case "/css/main.css":
 			case "/js/index.js":
+			case "/favicon.ico":
+			case "/android-touch-icon.png":
+			case "/apple-touch-icon.png":
 			return "./" + req.url.substr(1);
 			default:
 			return null;
@@ -39,6 +43,21 @@ const server = http.createServer((req, res) => {
 			return;
 		}
 		switch (ext) {
+			case ".png":
+				res.writeHead(200, {
+					"Content-Type": "image/png"
+				});
+				break;
+			case ".svg":
+				res.writeHead(200, {
+					"Content-Type": "image/svg+xml"
+				});
+				break;
+			case ".ico":
+				res.writeHead(200, {
+					"Content-Type": "image/x-icon"
+				});
+				break;
 			case ".pdf":
 				res.writeHead(200, {
 					"Content-Type": "application/pdf"
