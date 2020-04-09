@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/shinonomekazan/web#readme",
   "dependencies": {
-    "handlebars": "^4.7.2",
+    "handlebars": "^4.7.6",
     "sass": "^1.22.10"
   },
   "devDependencies": {
