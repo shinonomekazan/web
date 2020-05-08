@@ -18,6 +18,7 @@ const server = http.createServer((req, res) => {
 			case "/contact.html":
 			case "/success.html":
 			case "/logo.html":
+			case "/tech.html":
 			return "./html/" + req.url.substr(1);
 			case "/css/main.css":
 			case "/js/index.js":
