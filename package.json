@@ -13,7 +13,7 @@
 		"prettier:write": "prettier --write .",
 		"lint:fix": "npm run prettier:write",
 		"lint": "npm run prettier:check",
-		"deploy": "npm run build && rm -rf dist && mkdir dist && cp -R html/* dist/ && cp -R css dist/ && cp -R js dist/ && cp -R files dist/ && cp *.png dist/ && cp *.ico dist/"
+		"deploy": "npm run build && rm -rf dist && mkdir dist && cp -R html/* dist/ && cp -R css dist/ && cp -R js dist/ && cp -R files dist/ && cp *.png dist/ && cp *.ico dist/ && cp -R public/* dist/"
 	},
 	"repository": {
 		"type": "git",
