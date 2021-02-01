@@ -28,7 +28,10 @@ const server = http.createServer((req, res) => {
 			case "/apple-touch-icon.png":
 				return "./" + req.url.substr(1);
 			default:
-				return null;
+				if (req.url.substr(-1) === "/") {
+					return "./public/" + req.url.substr(1) + "index.html";
+				}
+				return "./public/" + req.url.substr(1);
 		}
 	}
 	const f = getPath();
