@@ -7,12 +7,12 @@ function promiseMakeDirectory(path) {
 		fs.stat(path, (err, stats) => {
 			if (err) {
 				// 決め打ち
-				fs.mkdir(path, {mode: 755}, (err2 => {
+				fs.mkdir(path, { mode: 0o755 }, (err2) => {
 					if (err2) {
 						return reject(err2);
 					}
 					resolve();
-				}));
+				});
 				return;
 			}
 			if (stats.isDirectory()) {
@@ -20,34 +20,34 @@ function promiseMakeDirectory(path) {
 				return;
 			}
 			reject(new Error("invalid file detected: " + path));
-		})
+		});
 	});
 }
 
 function promiseRead(path) {
 	return new Promise((resolve, reject) => {
-		fs.readFile(path, {encoding: "utf8"}, (err, data) => {
+		fs.readFile(path, { encoding: "utf8" }, (err, data) => {
 			if (err) {
 				reject(new Error(err));
 				return;
 			}
 			resolve({
 				path: path,
-				data: data
+				data: data,
 			});
-		})
+		});
 	});
 }
 function promiseWrite(path, body) {
 	return new Promise((resolve, reject) => {
-		fs.writeFile(path, body, {encoding: "utf8"}, (err) => {
+		fs.writeFile(path, body, { encoding: "utf8" }, (err) => {
 			if (err) {
 				reject(new Error(err));
 				return;
 			}
 			resolve(path);
-		})
-	})
+		});
+	});
 }
 function promiseReadDir(dirpath) {
 	return new Promise((resolve, reject) => {
@@ -57,7 +57,7 @@ function promiseReadDir(dirpath) {
 				return;
 			}
 			const ret = [];
-			let count = files.length;;
+			let count = files.length;
 			files.forEach((file) => {
 				const targetPath = path.resolve(dirpath, file);
 				fs.stat(targetPath, (err, stat) => {
@@ -75,7 +75,7 @@ function promiseReadDir(dirpath) {
 				});
 			});
 		});
-	})
+	});
 }
 
 promiseMakeDirectory("html")
@@ -85,32 +85,41 @@ promiseMakeDirectory("html")
 		promises.push(promiseRead("template/parts/head.html"));
 		promises.push(promiseRead("template/parts/header.html"));
 		return Promise.all(promises);
-	}).then((parts) => {
+	})
+	.then((parts) => {
 		return promiseReadDir("template").then((templates) => {
 			return {
 				parts,
-				templates
+				templates,
 			};
 		});
-	}).then((seed) => {
+	})
+	.then((seed) => {
 		seed.parts.forEach((part) => {
 			hbs.registerPartial(path.basename(part.path, ".html"), part.data);
 		});
-		return Promise.all(seed.templates.map((template) => {
-			return promiseRead(template);
-		}));
-	}).then((templates) => {
-		return Promise.all(templates.map((template) => {
-			const html = hbs.compile(template.data);
-			// これをファイル出力すればまあ使える
-			return promiseWrite(
-				// Note: ほんとはprocess.cwd()じゃなくて__dirname使いたいがmjsだと使えない
-				path.join(process.cwd(), "html", path.basename(template.path)),
-				html()
-			);
-		}));
-	}).then(() => {
+		return Promise.all(
+			seed.templates.map((template) => {
+				return promiseRead(template);
+			})
+		);
+	})
+	.then((templates) => {
+		return Promise.all(
+			templates.map((template) => {
+				const html = hbs.compile(template.data);
+				// これをファイル出力すればまあ使える
+				return promiseWrite(
+					// Note: ほんとはprocess.cwd()じゃなくて__dirname使いたいがmjsだと使えない
+					path.join(process.cwd(), "html", path.basename(template.path)),
+					html()
+				);
+			})
+		);
+	})
+	.then(() => {
 		console.log("finished");
-	}).catch((err) => {
+	})
+	.catch((err) => {
 		console.error(err);
 	});

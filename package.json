@@ -1,31 +1,36 @@
 {
-  "name": "shinonomekazan-web",
-  "version": "0.0.0",
-  "description": "",
-  "main": "index.mjs",
-  "scripts": {
-    "build:css-from-sass": "sass --no-source-map sass/main.sass css/main.css",
-    "build:css-from-scss": "sass --no-source-map sass/main.scss css/main.css",
-    "build:html": "node index.js",
-    "build": "npm run build:css-from-sass && npm run build:html",
-    "start": "npm run build && node --experimental-modules start.mjs",
-    "deploy": "npm run build && rm -rf dist && mkdir dist && cp -R html/* dist/ && cp -R css dist/ && cp -R js dist/ && cp -R files dist/ && cp *.png dist/ && cp *.ico dist/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shinonomekazan/web.git"
-  },
-  "author": "Shinonomekazan Co., Ltd.",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/shinonomekazan/web/issues"
-  },
-  "homepage": "https://github.com/shinonomekazan/web#readme",
-  "dependencies": {
-    "handlebars": "^4.7.6",
-    "sass": "^1.22.10"
-  },
-  "devDependencies": {
-    "bulma": "^0.7.5"
-  }
+	"name": "shinonomekazan-web",
+	"version": "0.0.0",
+	"description": "",
+	"main": "index.mjs",
+	"scripts": {
+		"build:css-from-sass": "sass --no-source-map sass/main.sass css/main.css",
+		"build:css-from-scss": "sass --no-source-map sass/main.scss css/main.css",
+		"build:html": "node index.js",
+		"build": "npm run build:css-from-sass && npm run build:html",
+		"start": "npm run build && node --experimental-modules start.mjs",
+		"prettier:check": "prettier --check .",
+		"prettier:write": "prettier --write .",
+		"lint:fix": "npm run prettier:write",
+		"lint": "npm run prettier:check",
+		"deploy": "npm run build && rm -rf dist && mkdir dist && cp -R html/* dist/ && cp -R css dist/ && cp -R js dist/ && cp -R files dist/ && cp *.png dist/ && cp *.ico dist/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/shinonomekazan/web.git"
+	},
+	"author": "Shinonomekazan Co., Ltd.",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/shinonomekazan/web/issues"
+	},
+	"homepage": "https://github.com/shinonomekazan/web#readme",
+	"dependencies": {
+		"handlebars": "^4.7.6",
+		"sass": "^1.22.10"
+	},
+	"devDependencies": {
+		"bulma": "^0.7.5",
+		"prettier": "^2.2.1"
+	}
 }
