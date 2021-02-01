@@ -1,69 +1,83 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-	{{>head title="お問い合わせ | 株式会社東雲火山"}}
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-			var form = document.querySelector("#contactForm");
-			function validation(e) {
-				if (! form.email.value) {
-					form.email.focus();
-					e.preventDefault();
-					return;
+	<head>
+		{{>head title="お問い合わせ | 株式会社東雲火山"}}
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+			integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+			crossorigin="anonymous"
+		/>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				var form = document.querySelector("#contactForm");
+				function validation(e) {
+					if (!form.email.value) {
+						form.email.focus();
+						e.preventDefault();
+						return;
+					}
+					if (!form.message.value) {
+						form.message.focus();
+						e.preventDefault();
+						return;
+					}
 				}
-				if (! form.message.value) {
-					form.message.focus();
-					e.preventDefault();
-					return;
-				}
-			}
-			form.addEventListener("submit", validation);
-		});
-	</script>
-</head>
+				form.addEventListener("submit", validation);
+			});
+		</script>
+	</head>
 
-<body class="has-navbar-fixed-top">
-	{{>header subtitle="お問い合わせ"}}
-	<main class="container">
-		<section id="access" class="section">
-			<h2 class="subtitle is-4">アクセス</h2>
-			<div>
-				<iframe
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.275671410967!2d139.7773124152585!3d35.670213580196865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188966e6614189%3A0x3f1c9cec3d1bcb40!2z44CSMTA0LTAwNDMg5p2x5Lqs6YO95Lit5aSu5Yy65rmK77yT5LiB55uu77yZ4oiS77yU!5e0!3m2!1sja!2sjp!4v1586858840535!5m2!1sja!2sjp"
-					style="width:100%; min-height: 450px; height: auto; border: 0" frameborder="0" allowfullscreen sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
-			</div>
-			<div class="content">
-				<p>〒104-0043 東京都中央区湊3-9-4 相川ビル402</p>
-				<p>京葉線八丁堀駅から徒歩8分、有楽町線新富町駅と日比谷線築地駅から徒歩10分、大江戸線月島駅から徒歩15分、頑張れば東京駅から徒歩20分くらいでたどり着けます。</p>
-			</div>
-		</section>
-		<section id="contact" class="section">
-			<h2 class="subtitle is-4">お問い合わせ</h2>
-			<div>
-				<form action="success.html" id="contactForm" name="contact" method="POST" data-netlify="true">
-					<div class="field">
-						<p class="control has-icons-left">
-							<input type="email" name="email" class="input" placeholder="メールアドレス"/>
-							<span class="icon is-small is-left">
-								<i class="fas fa-envelope"></i>
-							</span>
-						</p>
-					</div>
-					<div class="field">
-						<div class="control">
-							<textarea class="textarea" name="message" placeholder="問い合わせ内容をご記入ください" style="width:100%; height: 6em"></textarea>
+	<body class="has-navbar-fixed-top">
+		{{>header subtitle="お問い合わせ"}}
+		<main class="container">
+			<section id="access" class="section">
+				<h2 class="subtitle is-4">アクセス</h2>
+				<div>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.275671410967!2d139.7773124152585!3d35.670213580196865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188966e6614189%3A0x3f1c9cec3d1bcb40!2z44CSMTA0LTAwNDMg5p2x5Lqs6YO95Lit5aSu5Yy65rmK77yT5LiB55uu77yZ4oiS77yU!5e0!3m2!1sja!2sjp!4v1586858840535!5m2!1sja!2sjp"
+						style="width: 100%; min-height: 450px; height: auto; border: 0"
+						frameborder="0"
+						allowfullscreen
+						sandbox="allow-scripts allow-same-origin allow-popups"
+					></iframe>
+				</div>
+				<div class="content">
+					<p>〒104-0043 東京都中央区湊3-9-4 相川ビル402</p>
+					<p>
+						京葉線八丁堀駅から徒歩8分、有楽町線新富町駅と日比谷線築地駅から徒歩10分、大江戸線月島駅から徒歩15分、頑張れば東京駅から徒歩20分くらいでたどり着けます。
+					</p>
+				</div>
+			</section>
+			<section id="contact" class="section">
+				<h2 class="subtitle is-4">お問い合わせ</h2>
+				<div>
+					<form action="success.html" id="contactForm" name="contact" method="POST" data-netlify="true">
+						<div class="field">
+							<p class="control has-icons-left">
+								<input type="email" name="email" class="input" placeholder="メールアドレス" />
+								<span class="icon is-small is-left">
+									<i class="fas fa-envelope"></i>
+								</span>
+							</p>
 						</div>
-					</div>
-					<div>
-						<button class="button" type="submit">問い合わせ</button>
-					</div>
-				</form>
-			</div>
-		</section>
-	</main>
-	{{>footer}}
-</body>
-
+						<div class="field">
+							<div class="control">
+								<textarea
+									class="textarea"
+									name="message"
+									placeholder="問い合わせ内容をご記入ください"
+									style="width: 100%; height: 6em"
+								></textarea>
+							</div>
+						</div>
+						<div>
+							<button class="button" type="submit">問い合わせ</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
+		{{>footer}}
+	</body>
 </html>
