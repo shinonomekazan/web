@@ -5,10 +5,11 @@ import * as path from "path";
 const server = http.createServer((req, res) => {
 	// no cache
 	function getPath() {
-		if (req.url.startsWith("/files/")) {
-			return "./" + req.url.substr(1);
+		const url = new URL(req.url, `http://${req.headers.host}`);
+		if (url.pathname.startsWith("/files/")) {
+			return `./${url.pathname.substring(1)}`;
 		}
-		switch (req.url) {
+		switch (url.pathname) {
 			case "/":
 				return "./html/index.html";
 			case "/index.html":
@@ -21,18 +22,18 @@ const server = http.createServer((req, res) => {
 			case "/tech.html":
 			case "/jobs.html":
 			case "/achievement.html":
-				return "./html/" + req.url.substr(1);
+				return `./html/${url.pathname.substring(1)}`;
 			case "/css/main.css":
 			case "/js/index.js":
 			case "/favicon.ico":
 			case "/android-touch-icon.png":
 			case "/apple-touch-icon.png":
-				return "./" + req.url.substr(1);
+				return `./${url.pathname.substring(1)}`;
 			default:
-				if (req.url.substr(-1) === "/") {
-					return "./public/" + req.url.substr(1) + "index.html";
+				if (req.url.substring(-1) === "/") {
+					return `./public/${url.pathname.substring(1)}index.html`;
 				}
-				return "./public/" + req.url.substr(1);
+				return `./public/${url.pathname.substring(1)}`;
 		}
 	}
 	const f = getPath();
