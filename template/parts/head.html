@@ -14,15 +14,6 @@
 		f.parentNode.insertBefore(j, f);
 	})(window, document, "script", "dataLayer", "GTM-NQRCP9WL");
 	if (window.dataLayer == null) window.dataLayer = [];
-	const params = new URLSearchParams(location.search);
-	const user_id = params.get("user_id");
-	const role = params.get("role");
-	const variables = {};
-	if (user_id != null) variables["user_id"] = user_id;
-	if (role != null) variables["role"] = role;
-	if (Object.keys(variables).length > 0) {
-		dataLayer.push(variables);
-	}
 </script>
 <!-- End Google Tag Manager -->
 <link rel="stylesheet" href="css/main.css" />
