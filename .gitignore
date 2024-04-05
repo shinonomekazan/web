@@ -3,3 +3,4 @@ script
 dist
 html
 css
+.DS_Store
