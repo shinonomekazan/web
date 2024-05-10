@@ -52,13 +52,18 @@ $size-7: 0.75rem !default
   display: flex
   margin: 0 auto
 
-.history_img_pc
-  display: block !important
-  width: 148px
+.year
   margin-right: 32px
+  padding:8px 24px
+  font-size:18px
+  color:#fff
+  background-color:#004C71
+  border-radius:25px
 
-.history_img_sp
-  display: none !important
+.yearlist in2019
+    width: calc(100% - 8.5em)
+    padding: 0.5em 2.0em 3.0em
+    border-left: 2px solid #004C71
 
 ul.yearlist
   margin-top: 16px
@@ -68,7 +73,10 @@ ul.yearlist
 .text
   display: inline-flex
 
-
+.year-boder
+   border-left: 3px solid #004C71
+   padding-left: 40px
+   margin-left:48px
 li
   list-style: none
 
@@ -87,12 +95,8 @@ li
 .yearlist_list
   margin-bottom: 64px
 
-.yearlist_list_list.period
-  font-weight: bold
-
-.yearlist_list_list
-  margin-bottom: 24px
-
+.yearlist_list_list_list
+  padding-bottom: 16px
 
   /*事業実績*/
 .achievement_container
@@ -131,22 +135,24 @@ a
   border: none
   margin: 0 auto
   margin-top: 32px
+
 /*sp*/
 @media screen and (max-width: 480px)
-  .history_img_pc
-    display: none !important
-
-  .history_img_sp
-    display: block !important
 
   .history_container
-    width: 335px
+    width: 98%
     font-size: 14px
     line-height: 24px
 
   figcaption.history_list
     margin-left: 8px
 
+  .year
+    padding: 4px 8px
+    font-size: 14px
+    font-weight: bold
+  .year-boder
+    margin-left: 28px
   ul.yearlist
     margin-top: 0px
     padding-left: 8px
@@ -157,6 +163,9 @@ a
 
   .yearlist_list_list
     margin-bottom: 0px
+
+  .yearlist_list_list_list
+      padding-bottom: 4px
 
   .earlyperiod
     font-size: 10px
@@ -182,20 +191,7 @@ a
 
   .achievement_list
     margin-right: 0px
-
-  .space_1
-    margin-bottom: 4px
-
-  .space_2
-    margin-bottom: 16px
-
-  .space_3,
-  .space_4
-    margin-bottom: 40px
-
-
+    width: 100%
   .text
     display: inline-flex
     width: 75%
-
-
