@@ -15,10 +15,10 @@
 					<section class="section">
 						<div class="content">
 							<p>
-								本ページでは、2020年05月現在、東雲火山でよく利用している技術、苦手としている技術などをまとめていきます。
+								本ページでは、2024年05月現在、東雲火山でよく利用している技術、苦手としている技術などをまとめていきます。
 							</p>
 							<p>
-								東雲火山では現代の多くの技術は水物になりつつあり、また属人生が高いと考えているため、技術企業としての方針を指し示すものでは無い点にご注意ください。
+								東雲火山では現代の多くの技術は水物になりつつあり、また属人性が高いと考えているため、技術企業としての方針を指し示すものでは無い点にご注意ください。
 							</p>
 						</div>
 					</section>
@@ -32,12 +32,12 @@
 						<div class="content">
 							<ul>
 								<li>
-									Vue.js<br />
-									Web系はVueばかり使ってます。Nuxtはプロジェクトによって使ったり、使わなかったりです。
+									Vue.js, Vanilla, React<br />
+									Web系はVanilla構成を最も好んでいて、次いでVue.js、Reactの順です。
 								</li>
 								<li>
-									Unity (Unity Pro)<br />
-									ゲームやVRはほぼUnity一色です。
+									Unity<br />
+									スマートフォン向けのゲームやVRはほぼUnityです。
 								</li>
 								<li>SASS, Stylus, Material Design</li>
 								<li>Bootstrap, Vuetify, Element UI</li>
@@ -46,11 +46,7 @@
 									今っぽいものばかりでなく、レガシー系もそれなりに扱います。
 								</li>
 							</ul>
-							<p>
-								アプリ系だと、React
-								NativeやIonicも使っていきたいですが、案件成立に至らず使えていません。
-							</p>
-							<p>Unityではないネイティブアプリのプロジェクトは、東雲火山設立後関わっていません。</p>
+							<p>Unityではないネイティブアプリのプロジェクトは、東雲火山では関われていません。</p>
 						</div>
 					</section>
 					<section id="server-technologies" class="section">
@@ -59,27 +55,23 @@
 							<ul>
 								<li>
 									node.js, TypeScript<br />
-									最近サーバはこればかりです。ツールもこれが多いです。
+									サーバの最も基本的な構成です。
 								</li>
 								<li>
-									Golang<br />
-									node.jsとlambdaの組み合わせでEoLが問題になる事から、Goの話も増えてきました。
+									PHP, Python<br />
+									顧客の要望に合わせて、PHPとPythonは利用しています。
 								</li>
 								<li>
-									RDS, Aurora, CloudSQL<br />
-									RDBMSはもっぱらクラウドに頼っています。
-								</li>
-								<li>
-									MySQL, PostgreSQL<br />
+									MySQL, PostgreSQL, Redis, Firestore<br />
 									位置情報はPostgreSQL、アプリケーションはMySQLです。<br />
-									FirestoreやMongoDBは使いますが、SpannerやDynamoDBはあまり使った事がありません。
+									NoSQLではFirestore、KVS系の使い方としてはRedisが多いです。
 								</li>
 								<li>
-									docker, Kubernaters<br />
+									docker等<br />
 									他所と比べるとそれなりというレベルですが、使っています。
 								</li>
 							</ul>
-							<p>Scala含む関数型全般、PythonやRubyは弱めです。</p>
+							<p>Scala含む関数型全般、PythonやGo、CやRust等は弱めです。</p>
 						</div>
 					</section>
 					<section id="infrastructure-technologies" class="section">
@@ -88,7 +80,7 @@
 							<ul>
 								<li>
 									Firebase, Netlify<br />
-									2021年からそれまでのAWS中心から、Firebaseを中心に切り替えています。
+									最近はFirebaseを中心にすることが多いです。
 								</li>
 								<li>
 									Terraform, CloudFormation, Serverless Framework<br />
@@ -98,9 +90,13 @@
 									AWS, GCP<br />
 									Azureの経験もありますが、積極採用はしてません。
 								</li>
+								<li>
+									オンプレミス（Ubuntu）<br />
+									一部のプロジェクトでは、オンプレミスのサーバ運用も行っています。
+								</li>
 							</ul>
 							<p>
-								インフラとはまた別ですが、PlayFabやSteam等、ゲームプラットフォーム系へのデプロイ経験が不足気味なので、その辺りの経験も貯めていきたいと思っています。
+								PlayFabやSteam等、ゲームプラットフォーム系へのデプロイ経験が不足気味で、経験を蓄積していきたいですがまだできていません。
 							</p>
 						</div>
 					</section>
@@ -111,11 +107,10 @@
 								<li>Firebase</li>
 								<li>AppLovin MAX, Tenjin</li>
 								<li>Google Analytics (Tag Manager含む)</li>
+								<li>BigQuery, Tableau, Looker Studio</li>
 								<li>Athena (Presto), Hive</li>
 							</ul>
-							<p>
-								解析系はPigやTableau、BigQuery等も含めてある程度は触れますが、そこまで詳しくはないです。
-							</p>
+							<p>解析系はPig等も含めてある程度は触れますが、そこまで詳しくはないです。</p>
 						</div>
 					</section>
 					<section id="tools" class="section">
@@ -135,7 +130,7 @@
 									Skypeやチャットワーク等含めて、相手側に合わせる事が多いです。<br />
 									基幹のコミュニケーションツールはSlack（とGitHub）に寄せています。
 								</li>
-								<li>MS Office 365, G Suite</li>
+								<li>MS Office 365, Google Workspace</li>
 								<li>Adobe CC</li>
 								<li>
 									freee<br />
@@ -184,38 +179,33 @@
 
 				<article id="improve-technology">
 					<header>
-						<h2 class="subtitle is-3">現在は弱いが重視したい技術</h2>
+						<h2 class="subtitle is-3">延ばしていきたいところ</h2>
 					</header>
-					<section id="improve-iot" class="section">
-						<h3 class="subtitle is-4">IoT</h3>
-						<div class="content">
-							<p>エッジデバイス系技術は押さえておきたいのですが、なかなか手が出ません。</p>
-							<p>
-								選択肢をソフトウェアに限定しすぎないよう、機会があれば取り組んでいきたいと思っています。
-							</p>
-							<p>
-								主力業務として取り組むには企業規模が足りませんが、片手間でも触ってみたい人がいれば是非一緒にやっていきたいです。
-							</p>
-						</div>
-					</section>
 					<section id="improve-deep-learning" class="section">
 						<h3 class="subtitle is-4">機械学習系</h3>
 						<div class="content">
 							<p>さすがに無視できないので、強化する必要性は感じています。</p>
 							<p>機械学習の話を十分にできる人材との強いつながりも確保しておきたいと思っています。</p>
 							<p>
-								自社で全部やるという方向性よりは、関係性の強いパートナーの方が効率はいいかもしれません。
+								自社で全部やるという方向性よりは、機械学習に強いパートナーとの関係性構築を模索しています。
 							</p>
 						</div>
 					</section>
 					<section id="improve-design" class="section">
-						<h3 class="subtitle is-4">Webデザイン力</h3>
+						<h3 class="subtitle is-4">デザイン</h3>
 						<div class="content">
+							<p>東雲火山でも業務委託の協力者を含め、デザイン業務を取り扱っています。</p>
 							<p>
-								現代的なWebの（できればアプリも）作りに精通しているデザイナーと協力し、デザイン力の強化は図っていきたいです。
+								2024年05月現在まだまだ育成中であるため、まずはWebデザインを一定のレベルで取り扱える会社となっていけるよう、獲得した案件で部分的にデザインを任せてもらう等のアプローチを行っています。
 							</p>
+						</div>
+					</section>
+					<section id="improve-xr" class="section">
+						<h3 class="subtitle is-4">XR関連</h3>
+						<div class="content">
+							<p>東雲火山でもXRの案件は部分的に実施しています。</p>
 							<p>
-								Webやアプリは開発業務との距離が非常に近くになっているので、できれば社員として最低一名は入ってほしいと思っています。
+								位置情報の技術を重要視しているため、特に相性の良いAR案件には今後も積極的に関わっていきたいと考えています。
 							</p>
 						</div>
 					</section>
