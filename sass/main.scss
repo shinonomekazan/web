@@ -4,6 +4,14 @@
 // $blue: #ff0000;
 // $link: #ff0000;
 
+.level-icon {
+	background-color: #595959;
+	width: 120px;
+	text-align: center;
+	color: #fff;
+	font-size: 0.9em;
+}
+
 @import "../node_modules/bulma/sass/utilities/_all";
 @import "../node_modules/bulma/sass/base/_all";
 @import "../node_modules/bulma/sass/grid/columns";
