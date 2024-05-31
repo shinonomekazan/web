@@ -202,3 +202,346 @@ a
   .text
     display: inline-flex
     width: 75%
+
+  /*人材育成方針*/
+.training_container
+   font-size: 1.5rem
+
+.mv_sp
+   display: none
+
+.mv_pc
+   display: block
+   width: 100%
+
+.training_pc
+   display: block
+   width: 100%
+
+.training_sp
+   display: none
+
+.heading_2,
+.heading_3,
+.heading_4,
+.heading_5
+   color: #343E60
+   margin:0  10% 15%
+   padding-bottom: 80px
+
+.heading_01_a
+   height: 100%
+   margin-bottom:72px
+
+.heading_01_b
+   margin:72px 0px
+
+.heading_02
+   background-color:  #F5F5F5
+   padding: 24px 0px
+
+.heading_text
+   padding-top:24px
+   text-align: center
+   font-size: 40px
+   font-weight: bold
+
+.seven_definition,
+.career
+   background-color: #F5F5F5
+
+.definition_text
+   display: inline-block
+   width: 624px
+   margin-bottom: 3rem
+
+.heading_text span
+   color: #F19688
+   font-size:3rem
+
+
+.definition
+    margin-bottom: 3rem
+
+.definition_wrapper
+   display: inline-block
+
+.definition_img
+   width: 140px
+   display: inline-block
+   vertical-align: middle
+
+.definition_matome
+   margin-top: 2rem
+
+.employment
+   display: flex
+   margin-top: 3rem
+
+.employment_text
+   vertical-align: middle
+   line-height: 4rem
+   width: 540px
+   margin-right: 2rem
+
+.employment_text span
+   color: #F19688
+   font-size: 2rem
+
+.employment_img
+   vertical-align: middle
+   width: 640px
+   margin: 0
+   padding: 0
+   overflow: hidden
+   position: relative
+
+.employment_matome
+   margin-top: 2rem
+   color: #F19688
+
+.career_img_wrapper
+   text-align: center
+   margin: 3rem 0
+
+.career
+   text-align: center
+.career_img
+   width: 507px
+
+.career_heading
+   color: #fff
+   background-color: #F19688
+   padding: 1rem
+
+.career_box
+   width: 298px
+   height : 400px
+   border: 3px solid #F19688
+   background-color: #fff
+   margin: 3rem
+   display: inline-block
+   vertical-align: middle
+
+.career_text
+   margin: 1.5rem
+   line-height: 2.5rem
+
+.thought_box
+   width: 100%
+   margin-top: 2rem
+   border: 1px solid #F19688
+   outline: 1px solid #F19688
+   outline-offset: -10px
+   padding: 10% 20% 0% 20%
+
+.thought_text
+   line-height: 3rem
+   position: reracive
+
+
+.thought_img_wrapper
+   text-align: center
+
+.supplement_box
+   margin-top: 3rem
+
+accordion
+  margin: 3em auto
+  max-width: 60vw
+
+.toggle
+  display: none
+
+.option
+  position: relative
+  margin-bottom: 1em
+
+.title,
+.supplement_text
+  -webkit-backface-visibility: hidden
+  backface-visibility: hidden
+  transform: translateZ(0)
+  transition: all 0.3s
+
+.title
+  padding: 1em
+  display: block
+  font-weight: bold
+  text-align: center
+
+.toggle + .title::before
+  content: ""
+  background-image: url("../files/images/training/arow_bottom.png")
+  background-size: contain
+  background-repeat: no-repeat
+  position: absolute
+  right: 30%
+  top: 1.25rem
+  width: 2rem
+  height: 2rem
+
+.supplement_text
+  max-height: 0
+  overflow: hidden
+
+.supplement_text p
+  margin: 0
+  padding: 0.5em 1em 1em
+  line-height: 1.5
+
+.toggle:checked + .title + .supplement_text
+  max-height: 500px
+  transition: all 1.5s
+
+.toggle:checked + .title::before
+  content: ""
+  background-image: url("../files/images/training/arow_top.png")
+
+
+/*sp*/
+@media screen and (max-width: 480px)
+
+  .history_container
+    width: 98%
+    font-size: 14px
+    line-height: 24px
+
+  figcaption.history_list
+    margin-left: 8px
+
+  .year
+    padding: 4px 8px
+    font-size: 14px
+    font-weight: bold
+  .year-boder
+    margin-left: 28px
+  ul.yearlist
+    margin-top: 0px
+    padding-left: 8px
+    margin-bottom:48px
+
+  .yearlist_list
+    margin-bottom: 24px
+
+  .yearlist_list_list
+    margin-bottom: 0px
+
+  .yearlist_list_list_list
+      padding-bottom: 4px
+
+  .earlyperiod
+    font-size: 10px
+    padding: 4px 10px
+    border-radius: 13px
+    margin-right: 8px
+
+  .month
+    font-weight: bold
+    font-size: 14px
+    padding: 0px 10px
+    margin-right: 8px
+
+  .month_ep
+    font-weight: bold
+    font-size: 14px
+    padding: 0px 10px
+    margin-right: 16px
+
+  .achievement_container
+    height: 100%
+    min-width: min-content
+
+  .achievement_list
+    margin-right: 0px
+    width: 100%
+  .text
+    display: inline-flex
+    width: 75%
+
+  /*人材育成方針*/
+  .training_container
+   font-size: 0.8rem
+   overflow: hidden
+
+  .mv_sp
+   display: block
+   width: 100%
+
+  .mv_pc
+   display: none
+
+  .training_pc
+   display: none
+
+  .training_sp
+   display: block
+   width: 100%
+
+  .heading_2,
+  .heading_3,
+  .heading_4,
+  .heading_5
+   width:90%
+   margin:0 auto
+
+  .heading_text
+   font-size: 24px
+
+  .definition_text
+   width: 100%
+   display: block
+   text-align: center
+
+  .definition_wrapper
+   text-align: center
+   display: block
+
+
+  .definition_img
+   width: 70px
+
+  .employment
+   display: block
+
+  .employment_img
+   width: 100%
+   margin-top: 2rem
+
+  .employment_text
+   width: 100%
+   line-height: 1.8rem
+
+  .career_heading
+   font-size: 1rem
+
+  .career_box
+   width:80%
+   font-size: 1rem
+   display: block
+   margin: 2rem
+
+  .thought_box
+   padding: 5% 10% 0% 10%
+
+  .thought_text
+   line-height: 2rem
+
+  .thought_img_wrapper
+   width: 100%
+
+  .toggle + .title::before
+   content: ""
+   background-image: url("../files/images/training/arow_bottom.png")
+   background-size: contain
+   background-repeat: no-repeat
+   position: absolute
+   right: 7rem
+   top: 1.25rem
+   width: 2rem
+   height: 2rem
+
+  .toggle:checked + .title::before
+   content: ""
+   background-image: url("../files/images/training/arow_top.png")
+
