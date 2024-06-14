@@ -43,12 +43,15 @@ $size-7: 0.75rem !default
 
 
 /*沿革・実績*/
+.text a
+   display: contents
+
 .main_title
   text-align: center
   margin: 32px 0px
 
 .history_container
-  width: 1100px
+  width: fit-content
   display: flex
   margin: 0 auto
 
@@ -214,11 +217,16 @@ a
    display: block
    width: 100%
 
-.training_pc
+.training1_pc
    display: block
    width: 100%
 
-.training_sp
+.training2_pc
+   display: inline-block
+   width: 90%
+
+.training1_sp,
+.training2_sp
    display: none
 
 .heading_2,
@@ -235,6 +243,7 @@ a
 
 .heading_01_b
    margin:72px 0px
+   text-align: center
 
 .heading_02
    background-color:  #F5F5F5
@@ -252,7 +261,7 @@ a
 
 .definition_text
    display: inline-block
-   width: 624px
+   width: fit-content
    margin-bottom: 3rem
 
 .heading_text span
@@ -272,10 +281,11 @@ a
    vertical-align: middle
 
 .definition_matome
-   margin-top: 2rem
+   margin-top: 2.5rem
 
 .employment
    display: flex
+   justify-content: space-around
    margin-top: 3rem
 
 .employment_text
@@ -293,12 +303,12 @@ a
    width: 640px
    margin: 0
    padding: 0
-   overflow: hidden
    position: relative
 
 .employment_matome
    margin-top: 2rem
    color: #F19688
+   text-align: center
 
 .career_img_wrapper
    text-align: center
@@ -310,6 +320,7 @@ a
    width: 507px
 
 .career_heading
+   font-weight: bold
    color: #fff
    background-color: #F19688
    padding: 1rem
@@ -391,7 +402,7 @@ accordion
   line-height: 1.5
 
 .toggle:checked + .title + .supplement_text
-  max-height: 500px
+  max-height: fit-content
   transition: all 1.5s
 
 .toggle:checked + .title::before
@@ -399,70 +410,25 @@ accordion
   background-image: url("../files/images/training/arow_top.png")
 
 
+/*tablet*/
+@media screen and (max-width: 820px)
+
+   .employment
+    display: block
+
+   .employment_img
+    width: 100%
+    margin-top: 2rem
+
+   .employment_text
+    width: 100%
+    line-height: 2.5rem
+
 /*sp*/
 @media screen and (max-width: 480px)
-
-  .history_container
-    width: 98%
-    font-size: 14px
-    line-height: 24px
-
-  figcaption.history_list
-    margin-left: 8px
-
-  .year
-    padding: 4px 8px
-    font-size: 14px
-    font-weight: bold
-  .year-boder
-    margin-left: 28px
-  ul.yearlist
-    margin-top: 0px
-    padding-left: 8px
-    margin-bottom:48px
-
-  .yearlist_list
-    margin-bottom: 24px
-
-  .yearlist_list_list
-    margin-bottom: 0px
-
-  .yearlist_list_list_list
-      padding-bottom: 4px
-
-  .earlyperiod
-    font-size: 10px
-    padding: 4px 10px
-    border-radius: 13px
-    margin-right: 8px
-
-  .month
-    font-weight: bold
-    font-size: 14px
-    padding: 0px 10px
-    margin-right: 8px
-
-  .month_ep
-    font-weight: bold
-    font-size: 14px
-    padding: 0px 10px
-    margin-right: 16px
-
-  .achievement_container
-    height: 100%
-    min-width: min-content
-
-  .achievement_list
-    margin-right: 0px
-    width: 100%
-  .text
-    display: inline-flex
-    width: 75%
-
   /*人材育成方針*/
   .training_container
-   font-size: 0.8rem
-   overflow: hidden
+   font-size: 1.2rem
 
   .mv_sp
    display: block
@@ -471,12 +437,21 @@ accordion
   .mv_pc
    display: none
 
-  .training_pc
+
+  .heading_01_b
+   text-align: center
+
+  .training1_pc,
+  .training2_pc
    display: none
 
-  .training_sp
+  .training1_sp
    display: block
    width: 100%
+
+  .training2_sp
+   display: inline-block
+   width: 90%
 
   .heading_2,
   .heading_3,
@@ -501,22 +476,15 @@ accordion
   .definition_img
    width: 70px
 
-  .employment
-   display: block
-
-  .employment_img
-   width: 100%
-   margin-top: 2rem
-
   .employment_text
-   width: 100%
-   line-height: 1.8rem
+    line-height: 2rem
 
   .career_heading
    font-size: 1rem
 
   .career_box
    width:80%
+   height: fit-content
    font-size: 1rem
    display: block
    margin: 2rem
