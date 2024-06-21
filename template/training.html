@@ -1,142 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>株式会社東雲火山</title>
-		<!-- Google Tag Manager -->
-		<script>
-			(function (w, d, s, l, i) {
-				w[l] = w[l] || [];
-				w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-				var f = d.getElementsByTagName(s)[0],
-					j = d.createElement(s),
-					dl = l != "dataLayer" ? "&l=" + l : "";
-				j.async = true;
-				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-				f.parentNode.insertBefore(j, f);
-			})(window, document, "script", "dataLayer", "GTM-NQRCP9WL");
-			if (window.dataLayer == null) window.dataLayer = [];
-		</script>
-		<!-- End Google Tag Manager -->
-		<link rel="stylesheet" href="../css/main.css" />
-		<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-		<link rel="apple-touch-icon" href="./images/apple-touch-icon.png" sizes="180x180" />
-		<link rel="icon" type="image/png" href="./images/android-touch-icon.png" sizes="192x192" />
-		<script src="./js/index.js" async></script>
-		<meta
-			name="description"
-			content="Web、ゲーム系システムの受託・請負開発並びに自社サービス展開を行っている、株式会社東雲火山のホームページです。"
-		/>
+		{{>head title="お問い合わせ | 株式会社東雲火山"}}
 	</head>
 
 	<body class="has-navbar-fixed-top">
-		<!-- Google Tag Manager (noscript) -->
-		<noscript
-			><iframe
-				src="https://www.googletagmanager.com/ns.html?id=GTM-NQRCP9WL"
-				height="0"
-				width="0"
-				style="display: none; visibility: hidden"
-			></iframe
-		></noscript>
-		<!-- End Google Tag Manager (noscript) -->
-		<header>
-			<nav class="navbar is-light is-fixed-top">
-				<div class="navbar-brand">
-					<a class="navbar-item" href="/">
-						<img alt="株式会社東雲火山" src="files/images/logo-wide-218x50.png" />
-					</a>
-					<a
-						role="button"
-						class="navbar-burger burger"
-						aria-label="menu"
-						aria-expanded="false"
-						data-target="navbarMenuDocumentation"
-					>
-						<span aria-hidden="true"></span>
-						<span aria-hidden="true"></span>
-						<span aria-hidden="true"></span>
-					</a>
-				</div>
-				<div id="navbarMenuDocumentation" class="navbar-menu">
-					<div class="navbar-start">
-						<a class="navbar-item" href="./">会社概要</a>
-						<div class="navbar-item has-dropdown is-hoverable">
-							<a class="navbar-link">事業内容</a>
-							<div class="navbar-dropdown">
-								<a class="navbar-item" href="./work.html">WORK<br />事業内容</a>
-								<a class="navbar-item" href="./achievement.html">ACHIEVEMENT<br />事業実績</a>
-								<a class="navbar-item" href="./history.html">HISTORY<br />沿革</a>
-							</div>
-						</div>
-						<a class="navbar-item" href="./announcement.html">公告等</a>
-						<div class="navbar-item has-dropdown is-hoverable">
-							<a class="navbar-link">採用</a>
-							<div class="navbar-dropdown">
-								<a class="navbar-item" href="./jobs.html">RECRUIT<br />採用について</a>
-								<a class="navbar-item" href="./tech.html">TECHNOLOGY<br />利用技術</a>
-								<a class="navbar-item" href="https://members.shinonomekazan.com/">
-									<div class="flex">
-										<img alt="NEW" src="files/images/NEW_orange.png" /> PEOPLE<br />
-										「断片の価値の追求」とは何か？
-									</div>
-								</a>
-							</div>
-						</div>
-						<a class="navbar-item" href="./contact.html">お問い合わせ</a>
-					</div>
-				</div>
-			</nav>
-		</header>
-		<header>
-			<nav class="navbar is-light is-fixed-top">
-				<div class="navbar-brand">
-					<a class="navbar-item" href="/">
-						<img alt="株式会社東雲火山" src="files/images/logo-wide-218x50.png" />
-					</a>
-					<a
-						role="button"
-						class="navbar-burger burger"
-						aria-label="menu"
-						aria-expanded="false"
-						data-target="navbarMenuDocumentation"
-					>
-						<span aria-hidden="true"></span>
-						<span aria-hidden="true"></span>
-						<span aria-hidden="true"></span>
-					</a>
-				</div>
-				<div id="navbarMenuDocumentation" class="navbar-menu">
-					<div class="navbar-start">
-						<a class="navbar-item" href="./">会社概要</a>
-						<div class="navbar-item has-dropdown is-hoverable">
-							<a class="navbar-link">事業内容</a>
-							<div class="navbar-dropdown">
-								<a class="navbar-item" href="./work.html">WORK<br />事業内容</a>
-								<a class="navbar-item" href="./achievement.html">ACHIEVEMENT<br />事業実績</a>
-							</div>
-						</div>
-						<a class="navbar-item" href="./announcement.html">公告等</a>
-						<div class="navbar-item has-dropdown is-hoverable">
-							<a class="navbar-link">採用</a>
-							<div class="navbar-dropdown">
-								<a class="navbar-item" href="./jobs.html">RECRUIT<br />採用について</a>
-								<a class="navbar-item" href="./tech.html">TECHNOLOGY<br />利用技術</a>
-								<a class="navbar-item" href="https://members.shinonomekazan.com/">
-									<div class="flex">
-										<img alt="NEW" src="files/images/NEW_orange.png" /> PEOPLE<br />
-										「断片の価値の追求」とは何か？
-									</div>
-								</a>
-							</div>
-						</div>
-						<a class="navbar-item" href="./contact.html">お問い合わせ</a>
-					</div>
-				</div>
-			</nav>
-		</header>
-		<!--人材育成方針-->
+		{{>header subtitle="利用技術"}}
 		<main>
 			<div class="training_container">
 				<div class="mv_wrapper">
@@ -311,5 +180,6 @@
 				</div>
 			</div>
 		</main>
+		{{>footer}}
 	</body>
 </html>
