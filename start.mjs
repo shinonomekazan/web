@@ -22,6 +22,8 @@ const server = http.createServer((req, res) => {
 			case "/tech.html":
 			case "/jobs.html":
 			case "/achievement.html":
+			case "/training.html":
+			case "/history.html":
 				return `./html/${url.pathname.substring(1)}`;
 			case "/css/main.css":
 			case "/js/index.js":
