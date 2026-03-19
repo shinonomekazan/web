@@ -52,6 +52,11 @@ const server = http.createServer((req, res) => {
 			return;
 		}
 		switch (ext) {
+			case ".webp":
+				res.writeHead(200, {
+					"Content-Type": "image/webp",
+				});
+				break;
 			case ".png":
 				res.writeHead(200, {
 					"Content-Type": "image/png",
