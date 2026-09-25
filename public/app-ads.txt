@@ -96,3 +96,4 @@ indexexchange.com, 186684, RESELLER, 50b1c356f2c5c8fc
 indexexchange.com, 198417, RESELLER, 50b1c356f2c5c8fc
 indexexchange.com, 186081, RESELLER, 50b1c356f2c5c8fc
 google.com, pub-4025843484910090, DIRECT, f08c47fec0942fa0
+google.com, pub-4323006201726937, DIRECT, f08c47fec0942fa0
